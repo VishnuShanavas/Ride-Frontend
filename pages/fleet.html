@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Fleet - RIDE</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <span class="logo-text">R</span>
+                    </div>
+                    <span class="brand-name">RIDE</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="fleet.html" class="active">Our Fleet</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Our Premium Fleet</h1>
+                <a href="../index.html" class="back-home">← Back to Home</a>
+            </div>
+
+            <div class="fleet-intro">
+                <p>Discover our extensive collection of well-maintained, premium vehicles designed to meet all your transportation needs. From economy cars for daily commutes to luxury vehicles for special occasions.</p>
+            </div>
+
+            <div class="fleet-categories">
+                <div class="category">
+                    <h2>Economy Cars</h2>
+                    <div class="cars-grid">
+                        <div class="car-card">
+                            <img src="../images/car1.jpg" alt="Maruti Swift" class="car-image">
+                            <div class="car-info">
+                                <h3>Maruti Swift</h3>
+                                <ul class="car-features">
+                                    <li>AC • 5 Seater • Petrol</li>
+                                    <li>Manual Transmission</li>
+                                    <li>₹200/hour</li>
+                                </ul>
+                                <button class="btn-primary car-btn" onclick="selectCar('Maruti Swift')">Select This Car</button>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <img src="../images/car2.jpg" alt="Hyundai i20" class="car-image">
+                            <div class="car-info">
+                                <h3>Hyundai i20</h3>
+                                <ul class="car-features">
+                                    <li>AC • 5 Seater • Petrol</li>
+                                    <li>Automatic Transmission</li>
+                                    <li>₹250/hour</li>
+                                </ul>
+                                <button class="btn-primary car-btn" onclick="selectCar('Hyundai i20')">Select This Car</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>Premium Cars</h2>
+                    <div class="cars-grid">
+                        <div class="car-card">
+                            <img src="../images/car3.jpg" alt="Honda City" class="car-image">
+                            <div class="car-info">
+                                <h3>Honda City</h3>
+                                <ul class="car-features">
+                                    <li>AC • 5 Seater • Petrol/Diesel</li>
+                                    <li>Automatic • Sunroof</li>
+                                    <li>₹350/hour</li>
+                                </ul>
+                                <button class="btn-primary car-btn" onclick="selectCar('Honda City')">Select This Car</button>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <img src="../images/car4.jpg" alt="Toyota Camry" class="car-image">
+                            <div class="car-info">
+                                <h3>Toyota Camry</h3>
+                                <ul class="car-features">
+                                    <li>AC • 5 Seater • Hybrid</li>
+                                    <li>Automatic • Leather Seats</li>
+                                    <li>₹450/hour</li>
+                                </ul>
+                                <button class="btn-primary car-btn" onclick="selectCar('Toyota Camry')">Select This Car</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category">
+                    <h2>Luxury & SUV</h2>
+                    <div class="cars-grid">
+                        <div class="car-card">
+                            <img src="../images/.jpg" alt="BMW 3 Series" class="car-image">
+                            <div class="car-info">
+                                <h3>BMW 3 Series</h3>
+                                <ul class="car-features">
+                                    <li>AC • 5 Seater • Diesel</li>
+                                    <li>Automatic • Premium Interior</li>
+                                    <li>₹600/hour</li>
+                                </ul>
+                                <button class="btn-primary car-btn" onclick="selectCar('BMW 3 Series')">Select This Car</button>
+                            </div>
+                        </div>
+                        
+                        <div class="car-card">
+                            <img src="../images/.jpg" alt="Audi Q5" class="car-image">
+                            <div class="car-info">
+                                <h3>Audi Q5</h3>
+                                <ul class="car-features">
+                                    <li>AC • 7 Seater • Diesel</li>
+                                    <li>Automatic • 4WD • Premium</li>
+                                    <li>₹800/hour</li>
+                                </ul>
+                                <button class="btn-primary car-btn" onclick="selectCar('Audi Q5')">Select This Car</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fleet-features">
+                <h2>All Vehicles Include</h2>
+                <div class="features-grid">
+                    <div class="feature-item">🛡️ Full Insurance Coverage</div>
+                    <div class="feature-item">🧽 Regular Cleaning & Sanitization</div>
+                    <div class="feature-item">⛽ Fuel Management Options</div>
+                    <div class="feature-item">📱 GPS Tracking System</div>
+                    <div class="feature-item">🚗 Professional Maintenance</div>
+                    <div class="feature-item">⏰ 24/7 Roadside Assistance</div>
+                </div>
+            </div>
+
+            <div class="booking-cta">
+                <h2>Ready to Book?</h2>
+                <p>Choose your preferred vehicle and book instantly</p>
+                <a href="booking.html" class="btn-primary">Book Your Ride Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-circle">
+                            <span class="logo-text">R</span>
+                        </div>
+                        <span class="brand-name">RIDE</span>
+                    </div>
+                    <p>Your trusted partner for premium car rental services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@ride.com</p>
+                    <p>📍 Chennai, Tamil Nadu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RIDE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

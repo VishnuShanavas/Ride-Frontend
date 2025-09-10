@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Ride - RIDE</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-circle">
+                        <span class="logo-text">R</span>
+                    </div>
+                    <span class="brand-name">RIDE</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="fleet.html">Our Fleet</a></li>
+                    <li><a href="booking.html" class="active">Book Now</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>Book Your Ride</h1>
+                <a href="../index.html" class="back-home">← Back to Home</a>
+            </div>
+
+            <div class="booking-container">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-section">
+                        <h2>Personal Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" id="dob" name="dob">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address" rows="3" placeholder="Enter your complete address"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Booking Details</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="serviceType">Service Type *</label>
+                                <select id="serviceType" name="serviceType" required>
+                                    <option value="">Select Service</option>
+                                    <option value="hourly">Hourly Rental</option>
+                                    <option value="daily">Daily Rental</option>
+                                    <option value="airport">Airport Transfer</option>
+                                    <option value="outstation">Outstation</option>
+                                    <option value="wedding">Wedding/Event</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="carType">Car Category *</label>
+                                <select id="carType" name="carType" required>
+                                    <option value="">Select Category</option>
+                                    <option value="economy">Economy</option>
+                                    <option value="premium">Premium</option>
+                                    <option value="luxury">Luxury</option>
+                                    <option value="suv">SUV</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pickupDate">Pickup Date *</label>
+                                <input type="date" id="pickupDate" name="pickupDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pickupTime">Pickup Time *</label>
+                                <input type="time" id="pickupTime" name="pickupTime" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="duration">Duration (Hours)</label>
+                                <input type="number" id="duration" name="duration" min="1" max="24" value="4">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Budget Range</label>
+                                <input type="range" id="budget" name="budget" min="1000" max="10000" value="3000" oninput="updateBudgetValue(this.value)">
+                                <div class="budget-display">₹<span id="budgetValue">3000</span></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pickupLocation">Pickup Location *</label>
+                            <input type="text" id="pickupLocation" name="pickupLocation" required placeholder="Enter pickup address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dropLocation">Drop Location</label>
+                            <input type="text" id="dropLocation" name="dropLocation" placeholder="Enter drop address (if different)">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Additional Options</h2>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="driver">
+                                <span class="checkmark"></span>
+                                Professional Driver (+₹500)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="gps">
+                                <span class="checkmark"></span>
+                                GPS Navigation (+₹100)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="insurance">
+                                <span class="checkmark"></span>
+                                Extended Insurance (+₹200)
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="extras" value="fuel">
+                                <span class="checkmark"></span>
+                                Fuel Included (+₹800)
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred Contact Method:</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="contactMethod" value="phone" checked>
+                                    <span class="radio-mark"></span>
+                                    Phone Call
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contactMethod" value="email">
+                                    <span class="radio-mark"></span>
+                                    Email
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contactMethod" value="whatsapp">
+                                    <span class="radio-mark"></span>
+                                    WhatsApp
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="specialRequests">Special Requests</label>
+                            <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requirements or requests..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label class="checkbox-label agreement">
+                                <input type="checkbox" id="agreement" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" onclick="showTerms()">Terms and Conditions</a> and <a href="#" onclick="showPrivacy()">Privacy Policy</a> *
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="resetForm()">Reset Form</button>
+                            <button type="submit" class="btn-primary">Book Now</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="booking-summary">
+                    <h3>Booking Summary</h3>
+                    <div id="summaryContent">
+                        <p>Fill the form to see booking details</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <div class="logo-circle">
+                            <span class="logo-text">R</span>
+                        </div>
+                        <span class="brand-name">RIDE</span>
+                    </div>
+                    <p>Your trusted partner for premium car rental services.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="fleet.html">Our Fleet</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉️ info@ride.com</p>
+                    <p>📍 Chennai, Tamil Nadu</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RIDE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
